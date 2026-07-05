@@ -42,6 +42,7 @@ header #course-title {
   font-size: 1.5rem;
   font-weight: 100;
   text-align: center;
+  padding: .75rem;
 }
 
 .span {
