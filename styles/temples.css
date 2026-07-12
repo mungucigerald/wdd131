@@ -49,8 +49,8 @@ header {
     color: var(--accent1-color);
     border: 0;
     position: fixed;
-    top: 2.5rem;
-    right: 1rem;
+    top: 1rem;
+    right:.5rem;
 }
 
 #menu::before {
@@ -59,6 +59,7 @@ header {
 
 #menu.show::before {
     content: "✖️";
+    display: block;
 }
 
 ul {
@@ -66,7 +67,7 @@ ul {
     padding: 0;
 }
 
-.navigation {
+nav {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -90,10 +91,6 @@ a:hover {
 }
 
 .navigation.show a {
-    display: block;
-}
-
-#menu.show::before {
     display: block;
 }
 
