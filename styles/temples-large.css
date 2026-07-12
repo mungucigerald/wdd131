@@ -1,0 +1,58 @@
+@media screen and (min-width: 28.125rem) {
+
+    header,
+    main,
+    footer {
+        max-width: 100%;
+    }
+
+    h1, #top-title {
+        margin-left: 0;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    .navigation a {
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        padding: 10px 25px;
+    }
+
+
+    .navigation ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 0;
+        margin: 0;
+    }
+
+    .navigation li{
+        flex: 1;
+    }
+    main {
+        max-width: 1100px;
+        margin: 1rem auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        align-items: start;
+    }
+
+    main h1 {
+        grid-column: 1 / -1;
+    }
+
+    main figure {
+        margin: 0;
+    }
+}
