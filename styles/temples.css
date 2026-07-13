@@ -23,7 +23,7 @@ body {
 header,
 main,
 footer {
-    max-width: 450px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -48,9 +48,8 @@ header {
     text-decoration: none;
     color: var(--accent1-color);
     border: 0;
-    position: fixed;
-    top: 1rem;
-    right:.5rem;
+    position: relative;
+    text-align: end;    
 }
 
 #menu::before {
