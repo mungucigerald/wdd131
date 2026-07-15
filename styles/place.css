@@ -1,0 +1,74 @@
+:root {
+    --primary-color: lab(91.39% -20.39 89);
+    --secondary-color: lab(53.85% 72.17 49.68);
+    --accent1-color: #FFF8E7;
+    --accent2-color: #000000;
+    --accent3-color: #031016;;
+    --main-font: "Archivo Black",
+        sans-serif;
+    --secondary-font:"Share Tech",
+        sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    width: 100;
+    margin: 0 auto;
+    font-family: var(--main-font);
+}
+
+header{
+    text-align: center;
+    font-size: 2rem;
+    background-color: var(--secondary-color);
+    color: var(--accent1-color);
+    letter-spacing: 2px;
+    border: 1px solid peachpuff;
+    padding: 1rem;
+    border-bottom: 20px solid var(--primary-color);
+}
+
+h1{
+    border-bottom: 3px solid var(--accent2-color);
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    border-top: 15px solid var(--accent2-color);
+    border-bottom: 8px solid var(--secondary-color);
+}
+
+section{
+    text-align: center;
+    line-height: 0.75;
+    font-size: 1.2rem;
+    font-family: var(--secondary-font);
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+h2 {
+    text-decoration: underline;
+    font-family: var(--main-font);
+    padding-bottom: 0.75rem;
+}
+
+.weather-icon .heading::after{
+    content: "";
+} 
+
+footer {
+    background-color: var(--secondary-color);
+    text-align: center;
+    padding: 1rem;
+}
+
+footer p {
+    margin: 0.25rem 0;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    color: var(--accent2-color);
+}

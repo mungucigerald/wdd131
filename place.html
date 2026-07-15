@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Share+Tech&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uganda | Pearl of Africa</title>
+    <meta name="author" content="Gerald Munguci">
+    <meta name="description"
+        content="Discover the beauty and the delights of the Lords' Creations as demonstrated by the Pearl Of Africa">
+
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+
+    <link rel="shortcut icon" href="images/bullseye.svg" type="image/x-icon">
+
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Uganda</h1>
+    </header>
+
+    <main>
+        <div class="hero">
+            <picture>
+                <source media="(min-width: 1200px)" srcset="images/hero-large.webp">
+                <source media="(min-width: 900px)" srcset="images/hero-mid.webp">
+                <img src="images/hero-small.webp" alt="Uganda Crane" width="1200" height="1633">
+            </picture>
+        </div>
+        <section class="card data">
+            <h2 class="heading">Data</h2>
+            <p><strong>Area: </strong>241,038 sq km</p>
+            <p><strong>Population: </strong>49,000,000</p>
+            <p><strong>Capital: </strong>Kampala</p>
+            <p><strong>Languages: </strong>English, Swahilli, Luganda</p>
+            <p><strong>Currency: </strong>Ugandan Shilling</p>
+            <p><strong>Time Zone: </strong>UTC+3</p>
+            <p><strong>Calling Code: </strong>+256</p>
+            <p><strong>Internet TLD: </strong>.ug</p>
+        </section>
+        <section class="card weather">
+            <div class="heading">
+                <h2>Weather</h2>
+                <span class="weather-icon"></span>
+                <img src="images/weather_icon.svg" alt="Weather">
+            </div>
+            <p><strong>Temperature: </strong>16.3°C</p>
+            <p><strong>Conditions: </strong>Rain</p>
+            <p><strong>Wind: </strong>5km/h</p>
+            <p><strong>Wind Chill: </strong><span id="windChill">N/A</span></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> 🪴 Munguci Gerald 🪴 Uganda</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
