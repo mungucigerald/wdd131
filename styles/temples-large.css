@@ -6,7 +6,13 @@
         max-width: 100%;
     }
 
-    h1, #top-title {
+    header {
+        justify-content: last baseline;
+        padding: 0 1rem;
+    }
+
+    h1,
+    #top-title {
         margin-left: 0;
         font-size: 2rem;
         text-align: center;
@@ -18,27 +24,29 @@
 
     #menu {
         display: none;
-    } 
+    }
 
     .navigation a {
         display: block;
         text-decoration: none;
         text-align: center;
-        padding: 10px 25px;
+        padding: 10px 12px;
     }
 
 
-    .navigation ul {
+    .navigation {
         display: flex;
         flex-direction: row;
+        flex-wrap: nowrap;
         justify-content: flex-start;
         padding: 0;
         margin: 0;
     }
 
-    .navigation li{
+    .navigation li {
         flex: 1;
     }
+
     main {
         max-width: 1100px;
         margin: 1rem auto;
@@ -54,5 +62,13 @@
 
     main figure {
         margin: 0;
+    }
+}
+
+@media screen and (min-width: 43.75rem) {
+    nav.navigation {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: flex-end !important;
     }
 }
