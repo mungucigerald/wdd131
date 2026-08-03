@@ -5,28 +5,31 @@
         sans-serif;
     --utility-font: "Space Mono",
         monospace;
-    --background-color: linear-gradient(135deg,  /* sage to butter-cream */
-                rgb(226, 230, 228) 0%,
-                rgb(220, 228, 224) 50%,
-                hsla(45, 55%, 85%, 1) 100%);
-    
-    --card-backgound-color: linear-gradient(135deg, /*toasted honey*/
-                hsla(45, 90%, 88%, 1) 0%,
-                hsla(35, 70%, 70%, 1) 45%,
-                hsla(15, 55%, 50%, 1) 100%);;
+    --background-color: linear-gradient(135deg,
+            /* sage to butter-cream */
+            rgb(226, 230, 228) 0%,
+            rgb(220, 228, 224) 50%,
+            hsla(45, 55%, 85%, 1) 100%);
+
+    --card-background-color: linear-gradient(135deg,
+            /*toasted honey*/
+            hsla(45, 90%, 88%, 1) 0%,
+            hsla(35, 70%, 70%, 1) 45%,
+            hsla(15, 55%, 50%, 1) 100%);
     --text-color: #36454F;
-    /**/
-    --primary-color: #d9ae94ff; /* desert sand*/
-    /*Honey bronze*/
+    /*Charcoal Blue*/
+    --primary-color: #d9ae94;
+    /* desert sand*/
     --secondary-color: #65a30d;
     /*Bright Fern*/
     --accent-color1: #C05621;
     /*Bronze spice*/
     --accent-color2: #F2A93B;
-    /**/
+    /*Honey Bronze*/
 }
 
-html, body {
+html,
+body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -77,7 +80,7 @@ table {
     border-collapse: collapse;
     border: 1px solid var(--secondary-color);
     font-size: 0.8rem;
-    background: var(--card-backgound-color);
+    background: var(--card-background-color);
 }
 
 th {
@@ -94,7 +97,7 @@ th {
     text-align: center;
 }
 
-.swatch{
+.swatch {
     display: inline-block;
     margin-right: .2rem;
     width: 12px;
@@ -103,38 +106,43 @@ th {
     border-radius: 50%;
 }
 
-.text{
+.background {
+    background: var(--background-color);
+}
+
+.text {
     background: var(--text-color);
 }
 
-.primary{
+.primary {
     background: var(--primary-color);
 }
 
-.secondary{
+.secondary {
     background: var(--secondary-color);
 }
 
-.accent1{
+.accent1 {
     background: var(--accent-color1);
 }
 
-.accent2{
+.accent2 {
     background: var(--accent-color2);
 }
 
-.wireframe{
+.wireframe {
     max-width: 100%;
     margin: 1rem auto;
     display: block;
     border: 2px dashed var(--text-color);
-    background-color: var(--background-color);
+    background: var(--card-background-color);
 }
 
-pre{
-    font-size: smaller;
-
+pre {
+    font-size: .5rem;
+    text-align: center;
 }
+
 h3 {
     color: var(--secondary-color);
 }
@@ -144,6 +152,45 @@ footer {
     width: 100%;
     padding: 1.5rem;
     background: var(--secondary-color);
-    color: var(--background-color);
+    color: #f7f4ee;
     text-align: center;
+}
+
+/* ------------LARGE SCREENS------------ */
+@media (min-width: 900px) {
+
+    /* Pages displayed as columns */
+    .pages {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+    }
+
+    .pages h2 {
+        grid-column: 1/-1;
+        text-align: center;
+    }
+
+    .pages>div {
+        margin: 0;
+    }
+
+    /* Wireframe Grid */
+    .wireframes-wrap {
+        display: flex;
+        gap: 2rem;
+        align-items: flex-start;
+        justify-content: space-around;
+    }
+
+    .wireframes-wrap>section {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .wireframe pre {
+        line-height: 1.3;
+        font-size: .6rem;
+        white-space: pre;
+    }
 }
