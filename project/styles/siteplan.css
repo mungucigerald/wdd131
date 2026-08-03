@@ -1,0 +1,149 @@
+:root {
+    --heading-font: "Bricolage Grotesque",
+        sans-serif;
+    --body-font: "Inter",
+        sans-serif;
+    --utility-font: "Space Mono",
+        monospace;
+    --background-color: linear-gradient(135deg,  /* sage to butter-cream */
+                rgb(226, 230, 228) 0%,
+                rgb(220, 228, 224) 50%,
+                hsla(45, 55%, 85%, 1) 100%);
+    
+    --card-backgound-color: linear-gradient(135deg, /*toasted honey*/
+                hsla(45, 90%, 88%, 1) 0%,
+                hsla(35, 70%, 70%, 1) 45%,
+                hsla(15, 55%, 50%, 1) 100%);;
+    --text-color: #36454F;
+    /**/
+    --primary-color: #d9ae94ff; /* desert sand*/
+    /*Honey bronze*/
+    --secondary-color: #65a30d;
+    /*Bright Fern*/
+    --accent-color1: #C05621;
+    /*Bronze spice*/
+    --accent-color2: #F2A93B;
+    /**/
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    background: var(--background-color)
+}
+
+.wrap {
+    width: 95%;
+    margin: 1rem auto;
+    color: var(--text-color);
+}
+
+header {
+    border-bottom: 1px solid var(--secondary-color);
+    padding: 1.5rem;
+    width: 100%;
+    font-family: var(--heading-font);
+    background: var(--primary-color);
+    text-align: center;
+}
+
+h2,
+h3,
+strong {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    line-height: 1.15;
+}
+
+h2 {
+    margin-top: 2.5rem;
+    padding-top: 0.75rem;
+    border-top: 3px solid var(--accent-color1);
+}
+
+main {
+    padding: 0.5rem;
+    font-family: var(--body-font);
+}
+
+table,
+pre {
+    font-family: var(--utility-font);
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid var(--secondary-color);
+    font-size: 0.8rem;
+    background: var(--card-backgound-color);
+}
+
+th {
+    font-size: larger;
+    font-family: var(--heading-font);
+    color: var(--text-color);
+    background-color: var(--primary-color);
+}
+
+td,
+th {
+    border: 1px solid var(--secondary-color);
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.swatch{
+    display: inline-block;
+    margin-right: .2rem;
+    width: 12px;
+    height: 12px;
+    border: 1px solid var(--text-color);
+    border-radius: 50%;
+}
+
+.text{
+    background: var(--text-color);
+}
+
+.primary{
+    background: var(--primary-color);
+}
+
+.secondary{
+    background: var(--secondary-color);
+}
+
+.accent1{
+    background: var(--accent-color1);
+}
+
+.accent2{
+    background: var(--accent-color2);
+}
+
+.wireframe{
+    max-width: 100%;
+    margin: 1rem auto;
+    display: block;
+    border: 2px dashed var(--text-color);
+    background-color: var(--background-color);
+}
+
+pre{
+    font-size: smaller;
+
+}
+h3 {
+    color: var(--secondary-color);
+}
+
+footer {
+    margin: 0;
+    width: 100%;
+    padding: 1.5rem;
+    background: var(--secondary-color);
+    color: var(--background-color);
+    text-align: center;
+}

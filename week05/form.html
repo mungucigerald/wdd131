@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review</title>
+
+    <meta name="description" content="Collect product reviews for feedback from the end user.">
+    <meta name="author" content="Munguci Gerald">
+
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+    <script src="../scripts/getdates.js" defer></script>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <!-- CONTENT -->
+    <main>
+        <form action="review.html" method="get" class="prform">
+            <fieldset>
+                <label>Product Name<span class="asterisk">*</span>
+                    <select name="product" required id="product">
+                        <option value="" disabled selected>Choose a Product</option>
+                    </select>
+                </label>
+
+                <div class="label">Overall Rating<span class="asterisk">*</span></div>
+                <div class="stars">
+                    <label>&star;<span class="sr-only">1 star</span><input type="radio" name="rating" value="1star" required></label>
+                    <label>&star; &star;<span class="sr-only">2 stars</span><input type="radio" name="rating" value="2star" required></label>
+                    <label>&star; &star; &star;<span class="sr-only">3 stars</span><input type="radio" name="rating" value="3star" required></label>
+                    <label>&star; &star; &star; &star;<span class="sr-only">4 stars</span><input type="radio" name="rating" value="4star" required></label>
+                    <label>&star; &star; &star; &star; &star;<span class="sr-only">5 stars</span><input type="radio" name="rating" value="5star" required></label>
+                </div>
+
+                <label>Date of Installation<span class="asterisk">*</span> <input type="date" name="installDate" id="date" required></label>
+
+                <div class="label">Which features did you find useful in the product? (Check all that apply)</div>
+                <label><input type="checkbox" name="durability" value="yes">Durability</label>
+                <label><input type="checkbox" name="ease" value="yes">Ease of Use</label>
+                <label><input type="checkbox" name="performance" value="yes">Performance</label>
+                <label><input type="checkbox" name="design" value="yes">Design</label>
+
+                <label>Written Review<span class="opt">(Optional)</span><textarea name="writtenReview" rows="5" placeholder="What do you think about this product?"></textarea></label>
+
+                <label>Your Name<span class="opt">(Optional)</span><input type="text" name="userName" placeholder="Enter your name"></label>
+            </fieldset>
+
+            <input type="submit" value="Post Review">
+        </form>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> 🪴 Munguci Gerald 🪴 Uganda</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
