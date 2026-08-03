@@ -20,7 +20,7 @@ header {
 }
 
 /* ---------FORM--------- */
-.prform fieldset {
+.prform {
     margin: 2rem 0;
     border: none;
     background-color: #c9bcc7;
@@ -81,6 +81,9 @@ header {
     margin-top: 6px;
 }
 
+.sr-only{
+    display: none;
+}
 /* stars wrapped in flex container */
 .stars{
     display: flex;
