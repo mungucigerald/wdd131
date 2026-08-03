@@ -29,6 +29,10 @@ header {
     box-shadow: 2px 2px 5px #6e6b6b;
 }
 
+.prform fieldset{
+    border: none;
+}
+
 .prform label {
     display: block;
     padding-top: 1rem;
