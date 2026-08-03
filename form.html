@@ -29,9 +29,8 @@
             <option value="" disabled selected>Select a Product</option>
         </select>
         <!-- Overall Rating -->
-        <fieldset>
+        <fieldset class="stars">
             <legend class="label">Overall Rating<span class="asterisk">*</span></legend>
-            <div class="stars">
                 <label for="1star">&star;<span class="sr-only">1 star</span><input type="radio" name="rating"
                         value="1star" id="1star" required></label>
                 <label for="2stars">&star; &star;<span class="sr-only">2 stars</span><input type="radio" name="rating"
@@ -42,7 +41,6 @@
                         name="rating" value="4stars" id="4stars" required></label>
                 <label for="5stars">&star; &star; &star; &star; &star;<span class="sr-only">5 stars</span><input
                         type="radio" name="rating" value="5stars" id="5stars" required></label>
-            </div>
         </fieldset>
 
         <label for="date">Date of Installation<span class="asterisk">*</span> </label>
@@ -52,7 +50,7 @@
             <label for="durability"><input type="checkbox" id="durability" name="durability"
                     value="yes">Durability</label>
             <label for="ease"><input type="checkbox" id="ease" name="ease" value="yes">Ease of Use</label>
-            <label for="perfomance"><input type="checkbox" id="performance" name="performance"
+            <label for="performance"><input type="checkbox" id="performance" name="performance"
                     value="yes">Performance</label>
             <label for="design"><input type="checkbox" id="design" name="design" value="yes">Design</label>
 
