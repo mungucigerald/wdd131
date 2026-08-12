@@ -136,11 +136,75 @@ th {
     display: block;
     border: 2px dashed var(--text-color);
     background: var(--card-background-color);
+    font-size: .8rem;
+    font-family: var(--utility-font);
 }
 
-pre {
-    font-size: .5rem;
+.wf-frame {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    max-width: 320px;
+    margin: 0 auto;
+    padding: .5rem;
+}
+
+.wf-box {
+    border: 1.5px dashed #7c7c7c;
+    padding: .5rem;
     text-align: center;
+    border-radius: 4px;
+    background: var(--background-color);
+}
+
+.wf-row {
+    display: flex;
+    gap: .5rem;
+    align-items: stretch;
+}
+
+.wf-row>.wf-box {
+    flex: 1;
+}
+
+.wf-image {
+    background-image: repeating-linear-gradient(45deg, #d8d6ca, #d8d6ca 6px, #efeee6 6px, #efeee6 12px);
+    border: 1.5px dashed;
+    min-height: 3.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .72rem;
+    border-radius: 4px;
+}
+
+.wf-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wf-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: .5rem;
+}
+
+.wf-cards.mobile-cards {
+    grid-template-columns: 1fr;
+}
+
+.wf-card {
+    border: 1.5px dashed;
+    padding: .5rem;
+    background: var(--background-color);
+    border-radius: 4px;
+}
+
+.side-by-side {
+    display: grid;
+    grid-template-columns: 1fr 2.4fr;
+    gap: 1rem;
+    align-items: start;
 }
 
 h3 {
@@ -176,21 +240,28 @@ footer {
     }
 
     /* Wireframe Grid */
-    .wireframes-wrap {
-        display: flex;
-        gap: 2rem;
-        align-items: flex-start;
-        justify-content: space-around;
+    .desktop-frame {
+        max-width: 96%;
+        margin: 0 2rem 2rem;
     }
 
-    .wireframes-wrap>section {
-        flex: 1;
-        min-width: 0;
+    section .frames{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .wireframe pre {
-        line-height: 1.3;
-        font-size: .6rem;
-        white-space: pre;
+    .side-by-side {
+        grid-template-columns: 1fr;
     }
+
+    .wf-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .desktop-cards {
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
+
 }

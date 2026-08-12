@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mind Your Recipe | Quick, Personalized Recipes</title>
+  <meta name="description"
+    content="Mind Your Recipe is an interactive culinary guide and meal-planning space for people with tight schedules and specific dietary preferences." />
+  <meta name="author" content="Munguci Gerald" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.weserv.nl">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/styles.css" />
+
+  <script src="scripts/data.js" defer></script>
+  <script src="scripts/main.js" defer></script>
+  <script src="scripts/home.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="wrapper site-header__inner">
+      <a class="site-logo" href="index.html">
+        <span class="site-logo__mark" aria-hidden="true">🪴</span>
+        Mind Your Recipe
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu ☰</button>
+      <nav aria-label="Primary">
+        <ul class="site-nav__list" id="primary-nav">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="recipes.html">Recipes</a></li>
+          <li><a href="about.html">About</a></li>
+          <li>
+            <a class="favorites-link" href="recipes.html?favorites=true">
+              Favorites
+              <span class="favorites-badge" data-favorites-count hidden>0</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrapper hero__inner">
+        <div class="hero__intro">
+          <p class="eyebrow">Cook on your terms</p>
+          <h1>Recipes that fit the time and diet you actually have today.</h1>
+          <p>Mind Your Recipe is a browsable, filterable catalog of quick, customizable, and healthy meals &mdash; built
+            for people juggling a tight schedule and specific dietary needs.</p>
+          <form class="hero-search" data-hero-search role="search">
+            <label class="visually-hidden" for="hero-search-input">Search recipes</label>
+            <input type="search" id="hero-search-input" name="q"
+              placeholder="Search recipes, e.g. &quot;chicken&quot; or &quot;vegan&quot;" />
+            <button class="button button--primary" type="submit">Search</button>
+          </form>
+          <div class="hero__actions">
+            <a class="button button--secondary" href="recipes.html">Browse all recipes</a>
+          </div>
+        </div>
+        <img class="hero__image" src="https://images.weserv.nl/?url=images.pexels.com%2Fphotos%2F38485735%2Fpexels-photo-38485735.jpeg&amp;w=900&amp;h=700&amp;fit=cover&amp;q=80"
+          alt="An overhead spread of colorful home-cooked dishes, bowls, and fresh ingredients on a wooden table"
+          width="900" height="700" loading="eager" fetchpriority="high" />
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrapper">
+        <p class="eyebrow">Highlights</p>
+        <h2>Ready in 20 minutes or less</h2>
+        <div class="grid recipe-grid" data-featured-row>
+          <!-- Featured recipe cards are rendered by js/home.js -->
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrapper">
+        <div class="callout">
+          <h2>Have a recipe worth sharing?</h2>
+          <p>Tell us what you're cooking this week. Submit a recipe idea or leave feedback and we'll feature the best
+            ones.</p>
+          <a class="button button--primary" href="about.html#feedback-form">Submit a recipe idea</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrapper">
+        <p class="eyebrow">How filtering works</p>
+        <h2>Find a recipe by time, not just by craving</h2>
+        <p>Every recipe on the Recipes page can be filtered by cuisine, meal type, diet, and maximum prep time, or
+          searched by keyword. Save the ones you love and they'll be there next time you open the site &mdash; favorites
+          are stored right in your browser.</p>
+        <a class="button button--secondary" href="recipes.html">Start exploring</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrapper site-footer__inner">
+      <div>
+        <p><strong>Mind Your Recipe</strong></p>
+        <p><small>&copy; <span data-current-year>2026</span> Munguci Gerald. All recipes original unless noted in
+            references.</small></p>
+      </div>
+      <ul class="site-footer__nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="references.html">References</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+
+</html>

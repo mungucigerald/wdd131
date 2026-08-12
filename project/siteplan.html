@@ -25,6 +25,7 @@
     </header>
     <div class="wrap">
         <main>
+            <!-- Site name and Purpose -->
             <section>
                 <h2>Site Name</h2>
                 <p><strong>Mind Your Recipe</strong></p>
@@ -44,33 +45,37 @@
                 </p>
             </section>
             <section>
+                <!-- Applicable scenarios -->
                 <h2>Scenarios</h2>
                 <p>1. What is the best meal I can prepare for some vegeterian guests in 20minutes?</p>
                 <p>2. I need to find a recipe with a short cook time before I commit to read one!</p>
                 <p>3. How can share this recipe for a week night to food enthusiasts?</p>
             </section>
+            <!-- Brief pages description + Site map-->
             <section class="pages">
                 <h2>Pages</h2>
                 <div>
                     <h3>Home</h3>
-                    <p>First impression, hero banner, search bar, and featured recipe rows to invite the visitor without
-                        text.</p>
+                    <p>Brief introduction, hero banner, search bar, and featured highlight recipe, entry points into the
+                        Explorer and Submission pages.</p>
                 </div>
                 <div>
-                    <h3>Recipes</h3>
-                    <p>Full recipe index with filters ie cuisine, meal type, diet, prep time among others and a search
+                    <h3>Recipe Explorer</h3>
+                    <p>Full recipe catalog as a responsive card grid built from a JavaScript array of recipe object and
+                        with filters ie cuisine, meal type, diet, prep time among others and a search
                         bar</p>
                 </div>
                 <div>
-                    <h3>Recipe page</h3>
-                    <p>Holds the core content for a selected recipe. Ingredients list, step by step instructions, photos
-                        and cook time. Ratings, comments and save feature to be added.</p>
+                    <h3>Submit a Recipe / Feedback</h3>
+                    <p>A form for visitors to submit their own recipe ideas and leave feedback on a recipe they tried
+                        with a client side validation and confirmation message.</p>
                 </div>
                 <div>
-                    <h3>About</h3>
-                    <p>Hold a short story and photos, cooking philosophy and provides a way to get in touch.</p>
+                    <h3>References</h3>
+                    <p>Unstyled citation page for any outside sources or images, linked from the footer or all pages.</p>
                 </div>
             </section>
+            <!-- Color Schema -->
             <section>
                 <h2>Color Schema</h2>
                 <table>
@@ -133,7 +138,13 @@
                         </tr>
                     </tbody>
                 </table>
+                <div class="callout">
+                    <p>The callout boxes uses <strong>Bright Fern</strong> as its background to show reserved block of
+                        content that needs to stand apart from the rest of the page ie Nutrition tips or Weekly recipe
+                        highlights.</p>
+                </div>
             </section>
+            <!-- Typography -->
             <section>
                 <h2>Typography</h2>
                 <p>Three fonts to be applied, each with unique use.</p>
@@ -165,65 +176,63 @@
                     </tbody>
                 </table>
             </section>
+            <!-- Wireframes -->
             <section class="frames">
                 <h2>WireFrames</h2>
                 <p>The site will have three core pages i.e Home, Recipe Explorer and submit a recipe ot feedback.
                     The wireframes below sketch the layout of the Home page only, views are for mobile and desktops.</p>
-            
-                <div class="wireframes-wrap">
-                    <div>
-                        <h3>Mobile View (Potrait, ~600px)</h3>
-                        <div class="wireframe">
-                            <pre>
-        Home: Mobile view
-        +-------------------------+
-        |[logo + name]      [menu]|
-        |                         |
-        +-------------------------+
-        |Hero banner image        |
-        |Headline + short intro   |
-        |Primary button:Recipes   |
-        |Eyebrow: Highlights      |
-        |img                      |
-        |Recipe card              |
-        |img                      |
-        |Recipe card              |
-        |img                      |
-        |Recipe card              |
-        |Footer: nav links, year  |
-        +-------------------------+
-                            </pre>
+                <h3>Mobile (potrait, -400px)</h3>
+                <figure class="wireframe">
+                    <figcaption>Home — Mobile</figcaption>
+                    <div class="wf-frame">
+                        <div class="wf-box wf-nav">Logo <span>☰ Menu</span></div>
+                        <div class="wf-image">Hero banner image</div>
+                        <div class="wf-box">Headline + Short intro</div>
+                        <div class="wf-box">Primary button: Explore recipes</div>
+                        <div class="wf-box">Eyebrow: Seasonal Highlights</div>
+                        <div class="wf-cards mobile-cards">
+                            <div class="wf-card">
+                                <div class="wf-image">img</div>Recipe card
+                            </div>
+                            <div class="wf-card">
+                                <div class="wf-image">img</div>Recipe card
+                            </div>
+                            <div class="wf-card">
+                                <div class="wf-image">img</div>Recipe card
+                            </div>
                         </div>
+                        <div class="wf-box">Footer: nav links, references, year</div>
                     </div>
-            
-                    <div>
-                        <h3>Desktop (Wider Screens)</h3>
-                        <div class="wireframe">
-                            <pre>
-Home: Desktop
- +------------------------------------------------+
- |[Logo + name]                 [navigation links]|
- |                                                |
- +------------------------------------------------+
- |Headline + Short intro                          |
- |Primary + Secondary button                      |
- |Hero banner image                               |
- |Eyebrow: Highlights                             |
- |img                                             |
- |Recipe card: title, time tag, diet tag          |
- |img                                             |
- |Recipe card: title, time tag, diet tag          |
- |img                                             |
- |Recipe card: title, time tag, diet tag          |
- |Callout: submit your own recipe                 |
- |Text block: how filtering works on              |
- |the explorer page                               |
- |Footer: nav links, year                         |
- +------------------------------------------------+
-                            </pre>
+                </figure>
+
+                <h3>Desktop (wider screens)</h3>
+                <figure class="wireframe desktop-frame">
+                    <figcaption>Home — Desktop</figcaption>
+                    <div class="wf-frame" class="desktop">
+                        <div class="wf-box wf-nav">Logo <span>Home • Recipe Explorer • Submit a Recipe</span></div>
+                        <div class="wf-row">
+                            <div class="wf-box">Headline + Short intro<br>Primary + Secondary Button</div>
+                            <div class="wf-image">Hero banner image</div>
                         </div>
+                        <div class="wf-box">Eyebrow: Seasonal Highlights</div>
+                        <div class="wf-cards desktop-cards">
+                            <div class="wf-card">
+                                <div class="wf-image">img</div>Recipe card: title, time tag, diet tag
+                            </div>
+                            <div class="wf-card">
+                                <div class="wf-image">img</div>Recipe card: title, time tag, diet tag
+                            </div>
+                            <div class="wf-card">
+                                <div class="wf-image">img</div>Recipe card: title, time tag, diet tag
+                            </div>
+                        </div>
+                        <div class="side-by-side">
+                            <div class="wf-box">Callout: submit your own recipe</div>
+                            <div class="wf-box">Text block: how filtering works on the Explorer page</div>
+                        </div>
+                        <div class="wf-box">Footer: nav links, references, year</div>
                     </div>
-                </div>
+                </figure>
             </section>
         </main>
     </div>

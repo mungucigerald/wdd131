@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recipes | Mind Your Recipe</title>
+  <meta name="description"
+    content="Browse and filter every recipe on Mind Your Recipe by cuisine, meal type, diet, and prep time." />
+  <meta name="author" content="Munguci Gerald" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.weserv.nl">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/styles.css" />
+  
+  <script src="scripts/main.js" defer></script>
+  <script src="scripts/data.js" defer></script>
+  <script src="scripts/recipes.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="wrapper site-header__inner">
+      <a class="site-logo" href="index.html">
+        <span class="site-logo__mark" aria-hidden="true">🪴</span>
+        Mind Your Recipe
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu ☰</button>
+      <nav aria-label="Primary">
+        <ul class="site-nav__list" id="primary-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="recipes.html" aria-current="page">Recipes</a></li>
+          <li><a href="about.html">About</a></li>
+          <li>
+            <a class="favorites-link" href="recipes.html?favorites=true">
+              Favorites
+              <span class="favorites-badge" data-favorites-count hidden>0</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="wrapper">
+        <p class="eyebrow">Recipe explorer</p>
+        <h1>Find a recipe that fits your day</h1>
+        <p>Filter by cuisine, meal type, diet, and prep time, or search by keyword. Tap the heart on any recipe to save
+          it to your favorites.</p>
+
+        <form class="filter-bar" data-filter-form>
+          <div class="filter-bar__row">
+            <div>
+              <label for="search-input">Search</label>
+              <input type="search" id="search-input" data-search-input
+                placeholder="Try &quot;curry&quot; or &quot;quick&quot;" />
+            </div>
+            <div>
+              <label for="filter-cuisine">Cuisine</label>
+              <select id="filter-cuisine" data-filter-cuisine>
+                <option value="all">All cuisines</option>
+                <option value="Ugandan">Ugandan</option>
+                <option value="East African">East African</option>
+                <option value="West African">West African</option>
+                <option value="Central African">Central African</option>
+                <option value="Southern African">Southern African</option>
+                <option value="North African">North African</option>
+                <option value="Ethiopian">Ethiopian</option>
+              </select>
+            </div>
+            <div>
+              <label for="filter-meal">Meal type</label>
+              <select id="filter-meal" data-filter-meal>
+                <option value="all">Any meal</option>
+                <option value="Breakfast">Breakfast</option>
+                <option value="Lunch">Lunch</option>
+                <option value="Dinner">Dinner</option>
+              </select>
+            </div>
+            <div>
+              <label for="filter-diet">Diet</label>
+              <select id="filter-diet" data-filter-diet>
+                <option value="all">Any diet</option>
+                <option value="Vegan">Vegan</option>
+                <option value="Vegetarian">Vegetarian</option>
+                <option value="Gluten-Free">Gluten-Free</option>
+                <option value="None">No restriction</option>
+              </select>
+            </div>
+            <div>
+              <label for="filter-time">Max prep time: <span data-time-output>40</span> min</label>
+              <input type="range" id="filter-time" data-filter-time min="10" max="50" step="5" value="50" />
+            </div>
+            <div class="filter-bar__checkbox">
+              <input type="checkbox" id="filter-favorites" data-filter-favorites />
+              <label for="filter-favorites">Favorites only</label>
+            </div>
+          </div>
+          <div class="filter-bar__footer">
+            <p class="results-count" data-results-count>9 recipes found</p>
+            <button class="button button--secondary" type="button" data-reset-filters>Reset filters</button>
+          </div>
+        </form>
+
+        <div class="grid recipe-grid" data-recipe-grid></div>
+        <div class="empty-state" data-empty-state hidden>
+          <h2>No recipes match yet</h2>
+          <p>Try widening your prep time, clearing a filter, or removing part of your search.</p>
+          <button class="button button--primary" type="button" data-reset-filters>Reset filters</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrapper site-footer__inner">
+      <div>
+        <p><strong>Mind Your Recipe</strong></p>
+        <p><small>&copy; <span data-current-year>2026</span> Munguci Gerald. All recipes original unless noted in
+            references.</small></p>
+      </div>
+      <ul class="site-footer__nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="references.html">References</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Mind Your Recipe</title>
+  <meta name="description"
+    content="The story and cooking philosophy behind Mind Your Recipe, plus a form to submit recipe ideas and feedback." />
+  <meta name="author" content="Munguci Gerald" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/styles.css" />
+
+  <script src="scripts/data.js" defer></script>
+  <script src="scripts/main.js" defer></script>
+  <script src="scripts/about.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="wrapper site-header__inner">
+      <a class="site-logo" href="index.html">
+        <span class="site-logo__mark" aria-hidden="true">🪴</span>
+        Mind Your Recipe
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu ☰</button>
+      <nav aria-label="Primary">
+        <ul class="site-nav__list" id="primary-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="recipes.html">Recipes</a></li>
+          <li><a href="about.html" aria-current="page">About</a></li>
+          <li>
+            <a class="favorites-link" href="recipes.html?favorites=true">
+              Favorites
+              <span class="favorites-badge" data-favorites-count hidden>0</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="wrapper about-hero">
+        <div>
+          <p class="eyebrow">Our story</p>
+          <h1>Cooking should fit your life, not compete with it</h1>
+          <p>Mind Your Recipe started with a simple frustration: most recipe sites assume you have an open evening, a
+            full pantry, and no dietary restrictions to work around. We built the opposite &mdash; a catalog that starts
+            with your constraints, whether that's 20 minutes, a vegan guest list, or an ingredient you're avoiding, and
+            works forward from there.</p>
+          <p>Every recipe here is tagged by real prep time, diet, and difficulty so you can filter down to what actually
+            fits tonight, not just what looks good in a photo.</p>
+        </div>
+        <img src="https://images.weserv.nl/?url=images.pexels.com%2Fphotos%2F6811351%2Fpexels-photo-6811351.jpeg&amp;w=800&amp;h=600&amp;fit=cover&amp;q=80"
+          alt="A home cook chopping fresh herbs on a wooden cutting board in a sunlit kitchen" width="800" height="600"
+          loading="eager" fetchpriority="high" />
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrapper">
+        <p class="eyebrow">Cooking philosophy</p>
+        <h2>What guides every recipe we publish</h2>
+        <div class="grid philosophy-grid">
+          <div class="philosophy-card">
+            <h3>Time is an ingredient</h3>
+            <p>Every recipe lists an honest prep time, not an optimistic one. If it says 15 minutes, it takes 15
+              minutes.</p>
+          </div>
+          <div class="philosophy-card">
+            <h3>Diets are not an afterthought</h3>
+            <p>Vegan, vegetarian, and gluten-free options are built in from the start, not swapped in as a footnote.</p>
+          </div>
+          <div class="philosophy-card">
+            <h3>Simple tools, real flavor</h3>
+            <p>You shouldn't need specialty equipment or a pantry of rare spices to eat well on a weeknight.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="feedback-form">
+      <div class="wrapper">
+        <p class="eyebrow">Get in touch</p>
+        <h2>Submit a recipe idea or leave feedback</h2>
+        <p>Have a recipe we should add, or thoughts on how the site works? Fill out the form below &mdash; we read every
+          submission.</p>
+
+        <div class="grid feedback-layout">
+          <form class="form-card" data-feedback-form novalidate>
+            <fieldset>
+              <legend>Your message</legend>
+
+              <div class="form-field">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" autocomplete="name" required minlength="2" />
+                <span class="form-error" data-error-for="name"></span>
+              </div>
+
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" autocomplete="email" required />
+                <span class="form-error" data-error-for="email"></span>
+              </div>
+
+              <div class="form-field">
+                <span id="category-label" class="field-label">What's this about?</span>
+                <div class="radio-group" role="radiogroup" aria-labelledby="category-label">
+                  <label>
+                    <input type="radio" name="category" value="recipe" checked />
+                    Recipe idea
+                  </label>
+                  <label>
+                    <input type="radio" name="category" value="feedback" />
+                    General feedback
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required minlength="10"
+                  placeholder="Share your recipe idea or feedback here..."></textarea>
+                <span class="form-error" data-error-for="message"></span>
+              </div>
+
+              <button class="button button--primary" type="submit">Send message</button>
+              <p class="form-confirmation" data-form-confirmation hidden role="status"></p>
+            </fieldset>
+          </form>
+
+          <div>
+            <h3>Recent submissions</h3>
+            <p data-feedback-empty>No submissions yet &mdash; be the first to share a recipe idea or feedback.</p>
+            <ul class="feedback-list" data-feedback-list></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrapper site-footer__inner">
+      <div>
+        <p><strong>Mind Your Recipe</strong></p>
+        <p><small>&copy; <span data-current-year>2026</span> Munguci Gerald. All recipes original unless noted in
+            references.</small></p>
+      </div>
+      <ul class="site-footer__nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="references.html">References</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+
+</html>

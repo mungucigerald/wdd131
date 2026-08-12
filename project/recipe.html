@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recipe | Mind Your Recipe</title>
+  <meta name="description" content="Full ingredient list and step-by-step instructions for a Mind Your Recipe dish." />
+  <meta name="author" content="Munguci Gerald" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.weserv.nl">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/styles.css" />
+
+  <script src="scripts/data.js"></script>
+  <script>
+    (function preloadRecipeImage() {
+      var params = new URLSearchParams(window.location.search);
+      var id = params.get("id");
+      var allRecipes = typeof RECIPES !== "undefined" ? RECIPES : null;
+      var recipe = allRecipes && allRecipes.find(function (r) { return r.id === id; });
+      if (!recipe) return;
+
+      var parsed;
+      try {
+        parsed = new URL(recipe.image, window.location.href);
+      } catch (error) {
+        return;
+      }
+      if (parsed.origin === window.location.origin) return;
+
+      var sourceURL = parsed.href.replace(/^https:?\/\//, "");
+      var proxy = new URL("https://images.weserv.nl/");
+      proxy.searchParams.set("url", sourceURL);
+      proxy.searchParams.set("w", "800");
+      proxy.searchParams.set("h", "600");
+      proxy.searchParams.set("fit", "cover");
+      proxy.searchParams.set("q", "80");
+
+      var link = document.createElement("link");
+      link.rel = "preload";
+      link.as = "image";
+      link.href = proxy.toString();
+      document.head.appendChild(link);
+    })();
+  </script>
+  <script src="scripts/main.js" defer></script>
+  <script src="scripts/recipe-detail.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="wrapper site-header__inner">
+      <a class="site-logo" href="index.html">
+        <span class="site-logo__mark" aria-hidden="true">🪴</span>
+        Mind Your Recipe
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu ☰</button>
+      <nav class="site-nav" id="site-nav">
+        <ul class="site-nav__list" id="primary-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="recipes.html" aria-current="page">Recipes</a></li>
+          <li><a href="about.html">About</a></li>
+          <li>
+            <a class="favorites-link" href="recipes.html?favorites=true">
+              Favorites
+              <span class="favorites-badge" data-favorites-count hidden>0</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="wrapper">
+        <p><a href="recipes.html">&larr; Back to all recipes</a></p>
+        <div class="recipe-detail" data-recipe-detail>
+          <!-- Rendered by js/recipe-detail.js based on ?id= -->
+        </div>
+
+        <section class="related-recipes" aria-labelledby="related-heading">
+          <h2 id="related-heading">You might also like</h2>
+          <div class="grid related-grid" data-related-recipes></div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrapper site-footer__inner">
+      <div>
+        <p><strong>Mind Your Recipe</strong></p>
+        <p><small>&copy; <span data-current-year>2026</span> Munguci Gerald. All recipes original unless noted in
+            references.</small></p>
+      </div>
+      <ul class="site-footer__nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="references.html">References</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+
+</html>
